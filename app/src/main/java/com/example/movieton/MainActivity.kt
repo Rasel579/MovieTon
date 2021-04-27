@@ -15,9 +15,9 @@ import com.google.android.material.button.MaterialButton
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var btn : MaterialButton;
-    private lateinit var txtView : TextView;
-    private lateinit var listOfCustomers : ArrayList<Customer>;
+    private lateinit var btn: MaterialButton;
+    private lateinit var txtView: TextView;
+    private lateinit var listOfCustomers: ArrayList<Customer>;
     private var copyCustomerObj = Customer("Bruce", 21);
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             CustomerInit.addCustomer(copyCustomerObj.copy(name = "Rally", age = 22));
             CustomerInit.addCustomer(copyCustomerObj.copy(name = "Mark", age = 33));
             listOfCustomers = CustomerInit.getCustomer();
-            for (customer in listOfCustomers){
+            for (customer in listOfCustomers) {
                 txtView.text = customer.name
                 Log.i("Log", customer.name + " " + customer.age);
             }
